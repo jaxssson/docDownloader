@@ -3,3 +3,16 @@ Express server is running on port 3000
 [0mGET /plugin/socket.io.js [36m304 [0m3.178 ms - -[0m
 [0mGET /stylesheets/style.css [32m200 [0m16.051 ms - 491[0m
 [0mGET /javascripts/index.js [32m200 [0m7.698 ms - 1397[0m
+Express server is running on port 3000
+[0mGET / [36m304 [0m16.112 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m3.913 ms - -[0m
+[0mGET /plugin/socket.io.js [36m304 [0m4.358 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m4.943 ms - -[0m
+[0mGET / [36m304 [0m1.770 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.824 ms - -[0m
+[0mGET /plugin/socket.io.js [36m304 [0m2.591 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m2.586 ms - -[0m
+[0mGET / [36m304 [0m1.493 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.707 ms - -[0m
+[0mGET /plugin/socket.io.js [36m304 [0m2.076 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m1.840 ms - -[0m

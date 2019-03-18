@@ -2,6 +2,8 @@ const request = require('request-promise'),	// 支持promise的request包
 	iconv = require('iconv-lite'),	// buffer转gb2312使用，不然乱码
 	cheerio = require('cheerio');	// 将请求的string当做dom处理
 
+const fs = require('fs');
+
 class Doc {
 	constructor(url, msgTransmitter) {
 
@@ -40,12 +42,12 @@ class Doc {
 	// 从outerHTML中解析出contentUrl
 	_parseContentUrl() {
 		if (!/wkbjcloudbos\.bdimg\.com/.test(this.outerHTML)) {
-			this._setErrorMsg('当前文档非word内容或url有误');
+			this._setErrorMsg('当前文档非word/excel内容或url有误');
 			return;
 		}
 		const $ = cheerio.load(this.outerHTML);
 		this.title = $('title').text();
-		this.contentURL = $('script', '#hd').html().trim().replace(/\\x22|\\\\\\|\s/g, '').match(/pageLoadUrl:(.+?)}/g).map((url) => {
+		this.contentURL = $('script', '#hd').html().trim().replace(/\\x22|\\\\\\|\s/g, '').match(/pageLoadUrl:(.+?)0.json\?(.+?)}/g).map((url) => {
 			return url.slice(0, url.length - 1).split('pageLoadUrl:')[1];
 		});
 		if (!this.contentURL.length) {
