@@ -1,0 +1,5 @@
+Express server is running on port 3000
+[0mGET / [32m200 [0m22.543 ms - 989[0m
+[0mGET /plugin/socket.io.js [36m304 [0m3.178 ms - -[0m
+[0mGET /stylesheets/style.css [32m200 [0m16.051 ms - 491[0m
+[0mGET /javascripts/index.js [32m200 [0m7.698 ms - 1397[0m
