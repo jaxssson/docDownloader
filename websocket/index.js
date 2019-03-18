@@ -76,7 +76,7 @@ class SocketServer {
 	// 如果请求的地址在缓存中
 	fileInCache(url) {
 		for (let i = 0; i < this.files.length; i++) {
-			if (this.files[i].url === url) {
+			if (this.files[i] && this.files[i].url === url) {
 				return this.files[i];
 			}
 		}
